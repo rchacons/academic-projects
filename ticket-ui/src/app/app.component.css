@@ -1,0 +1,55 @@
+/* Style for the app name */
+.appName {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .appName h1 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .appName i {
+    font-style: italic;
+  }
+  
+ 
+/* Style for the person and ticket button containers */
+.buttonContainer {
+  margin-top: 40px;
+  width: 50%; /* set the width to 50% */
+  display: inline-block; /* display containers inline */
+  text-align: center;
+}
+
+.person button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ticket button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.person button:hover, .ticket button:hover {
+  background-color: #3e8e41;
+}
