@@ -10,7 +10,7 @@ import { Person } from '../model/person';
 })
 export class PersonService {
 
-  protected getPersonUrl = `${environment.ticketApi}/person/`
+  protected getPersonUrl = `${environment.ticketApi}/ticket/`;
   
   constructor(private http: HttpClient) { }
 
