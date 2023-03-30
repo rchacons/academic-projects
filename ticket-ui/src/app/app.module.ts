@@ -11,12 +11,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { TicketListComponent } from './components/ticket-list/ticket-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { TicketFormComponent } from './components/ticket-form/ticket-form.component';
+import { TicketComponent } from './components/ticket/ticket.component';
 
 const routes: Routes = [
   {path: 'user', component: UserComponent},
   {path:'tickets',component: TicketListComponent},
+  {path:'ticket',component: TicketComponent},
   {path:'addTicket', component: TicketFormComponent},
   {path: 'homePage', component: HomeComponent},
+  {path: 'person', component: PersonComponent},
   {path:'', redirectTo: 'homePage', pathMatch: 'full'}
 ];
 
@@ -29,6 +32,7 @@ const routes: Routes = [
     TicketListComponent,
     HomeComponent,
     TicketFormComponent,
+    TicketComponent,
   
   ],
   imports: [
