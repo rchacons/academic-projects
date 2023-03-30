@@ -12,6 +12,7 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
 import { HomeComponent } from './components/home/home.component';
 import { TicketFormComponent } from './components/ticket-form/ticket-form.component';
 import { TicketComponent } from './components/ticket/ticket.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: 'user', component: UserComponent},
@@ -39,6 +40,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule, 
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes, {})
   ],
   providers: [],

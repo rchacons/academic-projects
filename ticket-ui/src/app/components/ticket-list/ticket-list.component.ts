@@ -17,7 +17,7 @@ export class TicketListComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.listTicket();
   }
 
   listTicket() {
