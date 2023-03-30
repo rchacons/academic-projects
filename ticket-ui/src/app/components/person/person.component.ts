@@ -13,8 +13,12 @@ export class PersonComponent {
   
   constructor(personService : PersonService){
     // test
-    personService.getPersonById("1").subscribe(person => {
-      this.person = person;
+    personService.getPersonById("10").subscribe(person => {
+      if (person) {
+        console.log('Got person:', person);
+        this.person = person;
+      } else {
+        console.error('No person found');}
     });
   }
 
