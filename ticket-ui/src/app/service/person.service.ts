@@ -22,6 +22,20 @@ export class PersonService {
     );
   }
 
+  getAllUsers() : Observable<User>{
+    return this.http.get<User>(this.personsUrl+'/user').pipe(
+      tap((data) => console.log('List of users : '+ JSON.stringify(data)))
+    )
+  }
+
+  getAllSupportMember() : Observable<SupportMember>{
+    return this.http.get<SupportMember>(this.personsUrl+'/supportMember').pipe(
+      tap((data) => console.log('List of support members : '+ JSON.stringify(data)))
+    )
+  }
+
+
+
   saveUser(user : User){
     return this.http.post<User>(this.personsUrl,user)
   }

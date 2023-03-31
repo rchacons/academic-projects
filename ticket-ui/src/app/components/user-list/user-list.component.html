@@ -1,1 +1,30 @@
-<p>user-list works!</p>
+<div class="container ">
+    <hr class="my-10">
+  
+    <a href="">Home</a>
+    
+    <hr class="my-10">
+  
+      <table class="table table-responsive">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Created Tickets</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of users">
+              <td>{{user.id}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.type}}</td>
+              <td *ngFor = "let ticket of user.createdTicketsList">
+                {{ticket.id}}
+              </td>
+              </tr>
+          </tbody>
+      </table>
+
+    </div>
+  

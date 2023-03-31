@@ -16,6 +16,7 @@ import { SupportMemberListComponent } from './components/support-member-list/sup
 
 const routes: Routes = [
   {path: 'users', component: UserListComponent},
+  {path: 'supportMembers',component: SupportMemberListComponent},
   {path:'tickets',component: TicketListComponent},
   {path:'ticket',component: TicketComponent},
   {path:'addTicket', component: TicketFormComponent},
