@@ -1,1 +1,42 @@
-<p>ticket-form works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
+        <div class="form-group">
+            <label for="userId" id="userId-label">Creator:</label>
+            <input class="form-control" type="text" [(ngModel)]="ticket.creator"
+            id="userId" name="userId"
+            placeholder="Creator of ticket">
+        </div>
+
+        <div class="form-group">
+            <label for="typeTicket" id="typeTicket-label">Type of ticket:</label>
+            <select id="typeTicket" name="typeTicket" [(ngModel)]="ticket.type">
+                <option value="bug">Bug</option>
+                <option value="feature">Feature Request</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="title" id="title-label">Title:</label>
+            <input type="text" id="title" name="title" [(ngModel)]="ticket.title">
+        </div>
+        <div class="form-group">
+            <label for="tag" id="tag-label">Tag:</label>
+            <select id="tag" name="tag" [(ngModel)]="ticket.tag">
+                <option value="TAG1">Tag 1</option>
+                <option value="TAG2">Tag 2</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="!ticketForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+
+        
+
+
+
+            
+
+           

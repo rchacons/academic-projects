@@ -27,6 +27,10 @@ export class TicketService {
     );
   }
 
+  addTicket(ticket : Ticket){
+    return this.http.post<Ticket>(this.postTicketUrl, ticket );
+  }
+
 
 
 
