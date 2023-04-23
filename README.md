@@ -1,6 +1,22 @@
 # sir-tp10-IntegrationBack-Front
 ### Par Roberto Chacon et Manh-Huan NGUYEN.
 
+## Setup
+
+Pour démarrer, veuillez lancer la classe ***RestServer*** de l'application back.
+
+Ensuite, veuillez lancer le front depuis le dossier du projet *ticket-ui* :
+
+```
+ng serve
+```
+
+Une fois l'application lancé, vous pouvez l'ouvrir dans l'adresse : 
+
+```
+http://localhost:4200/
+```
+
 &nbsp;
 ## **Première étape** 
 &nbsp;

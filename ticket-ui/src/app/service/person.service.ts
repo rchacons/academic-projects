@@ -29,7 +29,7 @@ export class PersonService {
   }
 
   getAllSupportMember() : Observable<SupportMember>{
-    return this.http.get<SupportMember>(this.personsUrl+'/supportMember').pipe(
+    return this.http.get<SupportMember>(this.personsUrl+'/support').pipe(
       tap((data) => console.log('List of support members : '+ JSON.stringify(data)))
     )
   }

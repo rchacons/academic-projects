@@ -1,1 +1,32 @@
-<p>support-member-list works!</p>
+<div class="container ">
+    <hr class="my-10">
+  
+    <a href="">Home</a>
+    
+    <hr class="my-10">
+  
+      <table class="table table-responsive">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Assigned Tickets</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let support of supportMembers">
+              <td>{{support.id}}</td>
+              <td>{{support.name}}</td>
+              <td>{{support.type}}</td>
+              <td>
+                <p *ngFor = "let ticket of support.assignedTicketsList">
+                  <button routerLink = "/ticketDetail" routerLinkActive = "active-link" >{{ticket.id}}</button>
+                </p>
+              </td>
+              </tr>
+          </tbody>
+      </table>
+
+    </div>
+  

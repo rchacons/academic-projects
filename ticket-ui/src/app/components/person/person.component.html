@@ -1,16 +1,14 @@
-<p>person works!</p>
-<p>{{person?.name}}</p>
-<p>{{person?.type}}</p>
+<div class="buttonContainer">
+    <ul class="person-options">
+        <li class="list-users">
+            <a routerLink="/users" class="btn btn-info">List users</a>
+        </li>
+        <li class="list-supportMembers">
+            <a routerLink="/supportMembers" class="btn btn-info">List support members</a>
+        </li>
 
-<ul class="person-options">
-    <li class="list-users">
-        <a routerLink="/users" class="btn btn-info">List users</a>
-    </li>
-    <li class="list-supportMembers">
-        <a routerLink="/supportMembers" class="btn btn-info">List support members</a>
-    </li>
-
-    <li class="add-person">
-        <a routerLink="/addPerson" class="btn btn-info">Add person</a>
-    </li>
-</ul>
+        <li class="add-person">
+            <a routerLink="/addPerson" class="btn btn-info">Add person</a>
+        </li>
+    </ul>
+</div>

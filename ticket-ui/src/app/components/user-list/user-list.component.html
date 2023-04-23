@@ -19,8 +19,10 @@
               <td>{{user.id}}</td>
               <td>{{user.name}}</td>
               <td>{{user.type}}</td>
-              <td *ngFor = "let ticket of user.createdTicketsList">
-                {{ticket.id}}
+              <td>
+                <p *ngFor = "let ticket of user.createdTicketsList">
+                  <button routerLink = "/ticketDetail" routerLinkActive = "active-link" >{{ticket.id}}</button>
+                </p>
               </td>
               </tr>
           </tbody>
