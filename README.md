@@ -1,7 +1,7 @@
 # sir-tp10-IntegrationBack-Front
 ### Par Roberto Chacon et Manh-Huan NGUYEN.
 
-## Setup
+## **Setup**
 
 Pour démarrer, veuillez lancer la classe ***RestServer*** de l'application back.
 
@@ -53,4 +53,50 @@ export const environment = {
 }
 ```
 
+## **Deuxième étape**
 
+## Création des modèles
+
+Pour rappel, vous pouvez trouver la documentation de l'API dans le lien suivant : 
+```
+http://localhost:8090/api/
+```
+
+Notre front est composé des modèles suivants : 
+- **Person**
+    - **User** héritant de Person.
+    - **SupportMember** héritant de Person.
+- **Ticket**
+
+Nous avons utilisé des outils en ligne pour convertir notre API en modèles TypeScript afin de faciliter le démarrage.
+
+
+## Création des services
+
+L'application dispose de deux services principales qui vont permettre de communiquer avec l'API : 
+
+- **Ticket service** : Permettant des opérations telles que : 
+    -   GET un ticket par son ID.
+    -   GET tous les tickets.
+    -   POST un ticket à la bdd.
+
+
+- **Person service** : Permettant des opérations telles que : 
+    -   GET une personne par son ID.
+    -   GET toutes les personnes de type USER.
+    -   GET toutes les personnes de type SUPPORT-MEMBER.
+    -   POST un user à la bdd.
+    -   POST un support-member à la bdd.
+
+## Création des composants
+
+Nous avons implementé des différents composants en fonction des différentes pages de notre application.
+Le but étant de pouvoir obtenir les données de la base de données ainsi que l'enregistrement de celles-ci, nous avons crée les composants suivants : 
+
+- **Composants d'affichage** : *person-list*, *user-list* (héritant de person-list), *support-member-list* (héritant de person-list) et *ticket-list*. Ces composants vont se communiquer avec les services afin d'obtenir les données et les afficher dans leurs pages respectives.
+
+- **Composants d'enregistrement** : *person-form*, *ticket-form*. Ce sont des formulaires permettant de lancer les rêquetes POST et pouvoir ainsi enregistrer les données en base.
+
+- **Composants généraux** : *home*, *person* et *ticket*. Ces composants ne sont que des menus qui gèrent les routing vers les composants d'affichage ou d'enregistrement.
+
+(TODO: parler du routing)
