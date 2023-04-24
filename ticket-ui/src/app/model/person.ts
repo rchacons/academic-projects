@@ -6,5 +6,5 @@ export interface Person {
 
 export enum typePerson {
     USER = "User",
-    SUPPORTER = "Supporter"
+    SUPPORT_MEMBER = "Support"
 }

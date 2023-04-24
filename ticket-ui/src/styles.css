@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  a {
+    color: rgb(71, 71, 86);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightblue;
+  }
+  
+  a:hover {
+    background-color: rgb(94, 94, 108);
+    color: white;
+  }
+  
+
+  .my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  
+  .table td,
+.table th {
+  width: 25%; 
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #e5e5e5;
+}
+
+.table td {
+    text-align: center;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e5e5e5;
+  }
+  
+  .active-link {
+    color: #007bff;
+    font-weight: bold;
+  }
+  

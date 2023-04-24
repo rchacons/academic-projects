@@ -1,32 +1,21 @@
-<div class="container ">
-    <hr class="my-10">
-  
-    <a href="">Home</a>
-    
-    <hr class="my-10">
-  
-      <table class="table table-responsive">
-        <thead>
-            <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Created Tickets</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor = "let user of users">
-              <td>{{user.id}}</td>
-              <td>{{user.name}}</td>
-              <td>{{user.type}}</td>
-              <td>
-                <p *ngFor = "let ticket of user.createdTicketsList">
-                  <button routerLink = "/ticketDetail" routerLinkActive = "active-link" >{{ticket.id}}</button>
-                </p>
-              </td>
-              </tr>
-          </tbody>
-      </table>
+<app-person-list>
+  <!-- Overrides the header section of the person list-->
+  <ng-template #headerTemplate>
+    <th>Created Tickets</th>
+  </ng-template>
 
-    </div>
-  
+  <!-- Overrides the body section of the person list-->
+  <ng-template #bodyTemplate>
+    <tr *ngFor = "let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.type}}</td>
+      <td>
+        <p *ngFor = "let ticket of user.createdTicketsList">
+          <button routerLink = "/ticketDetail" routerLinkActive = "active-link" >{{ticket.id}}</button>
+        </p>
+      </td>
+    </tr>
+  </ng-template>
+
+</app-person-list>

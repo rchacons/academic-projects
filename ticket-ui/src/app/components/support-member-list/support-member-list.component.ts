@@ -2,21 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { SupportMember } from 'src/app/model/supportMember';
 import { PersonService } from 'src/app/service/person.service';
 import { ActivatedRoute } from '@angular/router';
+import { PersonListComponent } from '../person-list/person-list.component';
 
 
 @Component({
   selector: 'app-support-member-list',
   templateUrl: './support-member-list.component.html',
-  styleUrls: ['./support-member-list.component.css']
 })
-export class SupportMemberListComponent {
+export class SupportMemberListComponent extends PersonListComponent implements OnInit{
 
   supportMembers : SupportMember[]
 
-  constructor(private personService : PersonService, private route : ActivatedRoute){}
+  constructor(personService : PersonService, route : ActivatedRoute){
+    super(personService, route);
+  }
 
-  ngOnInit(): void {
-      this.listSupportMembers();
+  override ngOnInit(): void {
+    super.ngOnInit();
+    this.listSupportMembers();
   }
 
   listSupportMembers(){

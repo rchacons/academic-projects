@@ -1,8 +1,7 @@
+import { Person } from "./person"
 import { Ticket } from "./ticket"
 
-export interface SupportMember {
-    id: number
-    name: string
-    type: string
+export interface SupportMember extends Person{
+  
     assignedTicketsList: Ticket[]
   }

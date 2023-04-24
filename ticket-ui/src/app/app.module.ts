@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { PersonFormComponent } from './components/person-form/person-form.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { SupportMemberListComponent } from './components/support-member-list/support-member-list.component';
+import { PersonListComponent } from './components/person-list/person-list.component';
 
 const routes: Routes = [
   {path: 'users', component: UserListComponent},
@@ -38,6 +39,7 @@ const routes: Routes = [
     PersonFormComponent,
     UserListComponent,
     SupportMemberListComponent,
+    PersonListComponent,
   ],
   imports: [
     BrowserModule,
