@@ -12,12 +12,12 @@ import { User } from '../model/user';
 })
 export class PersonService {
 
-  protected personsUrl = `${environment.ticketApi}/person/`;
+  protected personsUrl = `${environment.ticketApi}/person`;
   
   constructor(private http: HttpClient) { }
 
   getPersonById(id : string) : Observable<Person> {
-    return this.http.get<Person>(this.personsUrl+id).pipe(
+    return this.http.get<Person>(this.personsUrl+"/"+id).pipe(
       tap((data) => console.log('Person :' +JSON.stringify(data)))
     );
   }
@@ -37,11 +37,11 @@ export class PersonService {
 
 
   saveUser(user : User){
-    return this.http.post<User>(this.personsUrl,user)
+    return this.http.post<User>(this.personsUrl+"/user",user)
   }
 
   saveSupportMember(supportMember : SupportMember){
-    return this.http.post<User>(this.personsUrl,supportMember)
+    return this.http.post<SupportMember>(this.personsUrl+"/support",supportMember)
   }
 
 }

@@ -1,10 +1,10 @@
-export interface Person {
+export class Person {
     id ?: number;
     name ?: string;
-    type ?: typePerson;
+    type ?: TypePerson;
 }
 
-export enum typePerson {
-    USER = "User",
-    SUPPORT_MEMBER = "Support"
+export enum TypePerson {
+    USER = "USER",
+    SUPPORT_MEMBER = "SUPPORT_MEMBER"
 }

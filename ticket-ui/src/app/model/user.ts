@@ -1,6 +1,6 @@
 import { Person } from "./person"
 import { Ticket } from "./ticket"
 
-export interface User extends Person{
+export class User extends Person{
     createdTicketsList: Ticket[]
   }
