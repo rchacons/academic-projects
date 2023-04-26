@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Ticket } from 'src/app/model/ticket';
+import { PersonService } from 'src/app/service/person.service';
 import { TicketService } from 'src/app/service/ticket.service';
 
 @Component({
@@ -8,23 +9,35 @@ import { TicketService } from 'src/app/service/ticket.service';
   templateUrl: './ticket-form.component.html',
   styleUrls: ['./ticket-form.component.css']
 })
-export class TicketFormComponent {
+export class TicketFormComponent  implements OnInit{
 
   ticket: Ticket;
+  users: any;
 
   constructor( private route : ActivatedRoute, private router: Router, 
-    private ticketService : TicketService) {
+    private ticketService : TicketService, private personService: PersonService) {
       this.ticket = new Ticket();
     }
+  ngOnInit(): void {
+    this.getAllUser();
+  }
 
-    onSubmit() {
+
+  onSubmit() {
       this.ticketService.addTicket(this.ticket).subscribe(
-        result =>  this.gotoTicketList()
+        () =>  this.gotoTicketList()
       );
-    }
-  
-    gotoTicketList() {
-      this.router.navigate(['/tickets']);
-    }
+  }
 
+  gotoTicketList() {
+      this.router.navigate(['/tickets']);
+  }
+
+  getAllUser() {
+    this.personService.getAllUsers().subscribe(
+      (data:any) => {
+        this.users = data;
+      }
+    )
+  }
 }
