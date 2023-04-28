@@ -99,4 +99,11 @@ Le but étant de pouvoir obtenir les données de la base de données ainsi que l
 
 - **Composants généraux** : *home*, *person* et *ticket*. Ces composants ne sont que des menus qui gèrent les routing vers les composants d'affichage ou d'enregistrement.
 
-(TODO: parler du routing)
+## Création de routing.
+
+- On a configuré des routing pour gérer la navigation de notre application. Une route dans sa forme la plus basique est l'association d'un composant et d'une  URL. Lorque cette URL est demandée, le module de routage effectue le rendu du composant associé. 
+ - Pour effectuer cette association d'une URL à un composant, il faut définir une variable de type Routes. Ce type est déclarer comme étatn un tableau dont chaque élément est un objet de type Route.
+
+- Une route est donc composée d'un attribut path qui réprésente l'URL (relative ou absolue) associé à cette route et d'un attribut component qui est le composant à charger lorsque cette route est appelée. 
+![alt text](./route.png)
+
