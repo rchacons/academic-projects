@@ -8,20 +8,16 @@
       <table class="table table-responsive">
         <thead>
             <tr>
-            <th>Id</th>
             <th>Title</th>
             <th>Creator</th>
             <th>State</th>
-            <th>Detail</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor = "let ticket of tickets">
-              <td>{{ticket.id}}</td>
               <td>{{ticket.title}}</td>
               <td>{{ticket.creator}}</td>
               <td>{{ticket.state}}</td>
-              <td><button routerLink = "/ticketDetail" routerLinkActive = "active-link" >Ticket detail</button></td>
             </tr>
           </tbody>
       </table>

@@ -9,7 +9,7 @@ import { TicketService } from 'src/app/service/ticket.service';
   templateUrl: './ticket-form.component.html',
   styleUrls: ['./ticket-form.component.css']
 })
-export class TicketFormComponent  implements OnInit{
+export class TicketFormComponent  implements OnInit {
 
   ticket: Ticket;
   users: any;
@@ -21,7 +21,6 @@ export class TicketFormComponent  implements OnInit{
   ngOnInit(): void {
     this.getAllUser();
   }
-
 
   onSubmit() {
       this.ticketService.addTicket(this.ticket).subscribe(
