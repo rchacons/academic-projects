@@ -11,6 +11,13 @@ A comprehensive support ticket management system with a Java backend REST API an
 
 [Go to project →](./support-ticket-system/)
 
+### Train Station Concurrency Simulator
+A Java-based concurrent programming project that simulates a train station with multiple trains, passengers, and platform management using thread synchronization and concurrency control. Features both console-based and REST API versions to demonstrate advanced concurrency concepts.
+
+**Technologies Used**: Java, Restlet Framework, Maven, Threading & Synchronization
+
+[Go to project →](./train-station-concurrency-simulator/)
+
 ## How to Use
 
 Each project folder contains its own README with specific instructions on how to set up and run the project.
