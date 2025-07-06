@@ -70,7 +70,7 @@ This project demonstrates proficiency in:
 
 ## Original Documentation
 
-The original README (in French) is preserved as README.markdown for historical reference.
+The original README (in French) is preserved as README.md.fr for historical reference.
 
 ---
 
