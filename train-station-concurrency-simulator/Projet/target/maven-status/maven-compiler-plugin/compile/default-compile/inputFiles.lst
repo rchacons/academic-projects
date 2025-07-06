@@ -1,0 +1,10 @@
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/main/Main.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/internals/EspaceQuai.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/internals/Voyageur.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/internals/EspaceVente.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/application/GareApplication.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/resources/VoyageursResource.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/internals/Gare.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/resources/TrainsResource.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/internals/Train.java
+/home/rchacons/Documents/Cours/S7/CSR/TP/CSR/Projet/src/main/java/fr/istic/csr/gare/database/InMemoryDataBase.java

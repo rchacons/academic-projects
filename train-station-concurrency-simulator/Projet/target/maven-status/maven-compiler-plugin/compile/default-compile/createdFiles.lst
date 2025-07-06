@@ -1,0 +1,12 @@
+fr/istic/csr/gare/v2/internals/Voyageur.class
+fr/istic/csr/gare/v2/internals/Train$StatusTrain.class
+fr/istic/csr/gare/v2/internals/Voyageur$StatusVoyageur.class
+fr/istic/csr/gare/v2/internals/EspaceQuai.class
+fr/istic/csr/gare/v2/internals/Train.class
+fr/istic/csr/gare/v2/application/GareApplication.class
+fr/istic/csr/gare/v2/resources/VoyageursResource.class
+fr/istic/csr/gare/v2/internals/EspaceVente.class
+fr/istic/csr/gare/v2/internals/Gare.class
+fr/istic/csr/gare/v2/resources/TrainsResource.class
+fr/istic/csr/gare/v2/database/InMemoryDataBase.class
+fr/istic/csr/gare/v2/main/Main.class
