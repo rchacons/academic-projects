@@ -32,6 +32,13 @@ A web application built with PHP using the MVC architecture for managing music e
 
 [Go to project →](./php-event-management-platform/)
 
+### Java Tower Defense Game
+A tower defense game built with Java that features multiple tower types, enemy units, and wave-based gameplay. The game includes resource management, tower upgrading, and various enemy types with different behaviors. Developed during my second year of Bachelor's degree for the "Programmation Objet" course.
+
+**Technologies Used**: Java, StdDraw Library, Object-Oriented Design
+
+[Go to project →](./java-tower-defense-game/)
+
 ## How to Use
 
 Each project folder contains its own README with specific instructions on how to set up and run the project.
