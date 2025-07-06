@@ -1,31 +1,67 @@
-# sir-tp10-IntegrationBack-Front
-### Par Roberto Chacon et Manh-Huan NGUYEN.
+# Support Ticket System
 
-## **Setup**
+## Overview
+A comprehensive support ticket management system with a Java backend REST API and an Angular frontend. This project was developed as part of the "Systèmes d'Information Répartis" (SIR) class in collaboration with Manh-Huan Nguyen ([manh-huan](https://github.com/manh-huan)) . It serves as an introduction to APIs and demonstrates the integration of frontend and backend technologies.
 
-Pour démarrer, veuillez lancer la classe ***RestServer*** de l'application back.
+## Project Structure
+The project consists of two main components:
+- **SIR-TP2-backend**: Java-based REST API built with JAX-RS for ticket management
+- **ticket-ui**: Angular-based user interface for interacting with the API
 
-Ensuite, veuillez lancer le front depuis le dossier du projet *ticket-ui* :
+## Features
+- Create and manage support tickets
+- User management (regular users and support team members)
+- View all tickets in the system
+- Assign tickets to support team members
 
-```
-ng serve
-```
+## Technologies Used
+- **Backend**:
+  - Java
+  - JAX-RS for REST API
+  - HSQLDB for database
+  - Maven for dependency management
+- **Frontend**:
+  - Angular
+  - TypeScript
+  - Bootstrap for styling
 
-Une fois l'application lancé, vous pouvez l'ouvrir dans l'adresse : 
+## Setup Instructions
 
-```
-http://localhost:4200/
-```
+### Backend Setup
+1. Navigate to the `SIR-TP2-backend` directory
+2. Start the database server by running the script:
+   ```bash
+   ./run-hsqldb-server.sh   # For Linux/Mac
+   # OR
+   run-hsqldb-server.bat    # For Windows
+   ```
+3. Run the `RestServer` class in your IDE, or build and run using Maven:
+   ```bash
+   mvn clean install
+   mvn exec:java -Dexec.mainClass="fr.istic.sir.rest.RestServer"
+   ```
+4. The API will be available at `http://localhost:8090`
+5. API documentation can be accessed at `http://localhost:8090/api/`
 
-&nbsp;
-## **Première étape** 
-&nbsp;
+### Frontend Setup
+1. Navigate to the `ticket-ui` directory
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   ng serve
+   ```
+4. Access the application at `http://localhost:4200`
 
-### **Modification des routes**
 
-Afin de regler les problèmes de CORS, nous avons crée un fichier ***proxy.config.json*** dans lequel nous avons ajouté la route vers l'API :
+## CORS Configuration
 
-```
+To solve CORS issues, we created a `proxy.config.json` file with the API route configuration:
+
+```json
+{
     "/ticket-api": {
         "target": "http://127.0.0.1:8090",
         "secure": "false",
@@ -34,76 +70,102 @@ Afin de regler les problèmes de CORS, nous avons crée un fichier ***proxy.conf
         },
         "logLevel": "debug"
     }
+}
 ```
-Et nous avons ajouté la configuration du proxy dans le fichier de configuration CLI : ***angular.json***
-```
-    "serve": {
-        "builder": "@angular-devkit/build-angular:dev-server",
-        "options": {  
-            "proxyConfig": "src/proxy.conf.json"
+
+We added the proxy configuration to the Angular CLI configuration in `angular.json`:
+
+```json
+"serve": {
+    "builder": "@angular-devkit/build-angular:dev-server",
+    "options": {  
+        "proxyConfig": "src/proxy.conf.json"
     }
+}
 ```
 
-Finalement, our utiliser plus simplement cette route dans notre code, nous avons crée une variable global dans ***environments.ts** afin de pouvoir l'appeler depuis n'importe où. 
+And created a global environment variable in `environments.ts` for easier access throughout the code:
 
-```
+```typescript
 export const environment = {
     production: false,
     ticketApi: "/ticket-api",
 }
 ```
 
-## **Deuxième étape**
+## API Models
 
-## Création des modèles
+- **Person**: Base class for users
+  - **User**: End users who create tickets
+  - **SupportMember**: Support team members who resolve tickets
+- **Ticket**: Support requests with details, status, and assignments
 
-Pour rappel, vous pouvez trouver la documentation de l'API dans le lien suivant : 
+The API documentation can be found at:
 ```
 http://localhost:8090/api/
 ```
 
-Notre front est composé des modèles suivants : 
-- **Person**
-    - **User** héritant de Person.
-    - **SupportMember** héritant de Person.
-- **Ticket**
+## Angular Services
 
-Nous avons utilisé des outils en ligne pour convertir notre API en modèles TypeScript afin de faciliter le démarrage.
+The application has two main services that enable communication with the API:
 
+- **Ticket Service**: Allows operations such as:
+  - GET a ticket by its ID
+  - GET all tickets
+  - POST a ticket to the database
 
-## Création des services
+- **Person Service**: Allows operations such as:
+  - GET a person by their ID
+  - GET all people of type USER
+  - GET all people of type SUPPORT-MEMBER
+  - POST a user to the database
+  - POST a support member to the database
 
-L'application dispose de deux services principales qui vont permettre de communiquer avec l'API : 
+## Angular Components
+Our application implements various components based on different application pages:
 
-- **Ticket service** : Permettant des opérations telles que : 
-    -   GET un ticket par son ID.
-    -   GET tous les tickets.
-    -   POST un ticket à la bdd.
+- **Display Components**: 
+  - `person-list`
+  - `user-list` (inherits from person-list)
+  - `support-member-list` (inherits from person-list)
+  - `ticket-list`
+  
+  These components communicate with services to get data and display it on their respective pages.
 
+- **Form Components**: 
+  - `person-form`
+  - `ticket-form`
+  
+  These are forms that allow sending POST requests to store data in the database.
 
-- **Person service** : Permettant des opérations telles que : 
-    -   GET une personne par son ID.
-    -   GET toutes les personnes de type USER.
-    -   GET toutes les personnes de type SUPPORT-MEMBER.
-    -   POST un user à la bdd.
-    -   POST un support-member à la bdd.
+- **Navigation Components**: 
+  - `home`
+  - `person`
+  - `ticket`
+  
+  These components are menus that handle routing to display or registration components.
 
-## Création des composants
+## Routing
+The application implements Angular routing to navigate between different views. A route in its most basic form is the association of a component and a URL. When this URL is requested, the routing module renders the associated component.
 
-Nous avons implementé des différents composants en fonction des différentes pages de notre application.
-Le but étant de pouvoir obtenir les données de la base de données ainsi que l'enregistrement de celles-ci, nous avons crée les composants suivants : 
+To make this association of a URL to a component, we define a variable of type Routes. This type is declared as an array where each element is an object of type Route.
 
-- **Composants d'affichage** : *person-list*, *user-list* (héritant de person-list), *support-member-list* (héritant de person-list) et *ticket-list*. Ces composants vont se communiquer avec les services afin d'obtenir les données et les afficher dans leurs pages respectives.
+A route consists of a path attribute that represents the URL (relative or absolute) associated with this route and a component attribute that is the component to load when this route is called.
 
-- **Composants d'enregistrement** : *person-form*, *ticket-form*. Ce sont des formulaires permettant de lancer les rêquetes POST et pouvoir ainsi enregistrer les données en base.
+![Routing Diagram](./route.png)
 
-- **Composants généraux** : *home*, *person* et *ticket*. Ces composants ne sont que des menus qui gèrent les routing vers les composants d'affichage ou d'enregistrement.
+## Contributors
+- Roberto Chacon
+- Manh-Huan Nguyen
 
-## Création de routing.
+## Acknowledgements
+This project was developed as part of the "Systèmes d'Information Répartis" class, based on initial work by Professor Barais.
 
-- On a configuré des routing pour gérer la navigation de notre application. Une route dans sa forme la plus basique est l'association d'un composant et d'une  URL. Lorque cette URL est demandée, le module de routage effectue le rendu du composant associé. 
- - Pour effectuer cette association d'une URL à un composant, il faut définir une variable de type Routes. Ce type est déclarer comme étatn un tableau dont chaque élément est un objet de type Route.
+![Routing Diagram](./route.png)
 
-- Une route est donc composée d'un attribut path qui réprésente l'URL (relative ou absolue) associé à cette route et d'un attribut component qui est le composant à charger lorsque cette route est appelée. 
-![alt text](./route.png)
+## Contributors
+- Roberto Chacon ([rchacons](https://github.com/rchacons))
+- Manh-Huan Nguyen ([manh-huan](https://github.com/manh-huan))
 
+## Acknowledgements
+This project was developed as part of the "Systèmes d'Information Répartis" class.
