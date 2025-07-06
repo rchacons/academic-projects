@@ -18,6 +18,13 @@ A Java-based concurrent programming project that simulates a train station with 
 
 [Go to project →](./train-station-concurrency-simulator/)
 
+### Angular Pokemon Explorer
+An Angular-based web application that leverages the public PokéAPI to display a searchable list of Pokémon with detailed information about each one. Features a responsive UI built with Angular Material and demonstrates concepts like component interaction, services, and API integration.
+
+**Technologies Used**: Angular, TypeScript, RxJS, REST API integration, Angular Material
+
+[Go to project →](./angular-pokemon-explorer/)
+
 ## How to Use
 
 Each project folder contains its own README with specific instructions on how to set up and run the project.
