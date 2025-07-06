@@ -4,6 +4,13 @@ This repository contains various academic projects developed during my coursewor
 
 ## Projects
 
+### Differential Privacy Index
+A Python implementation of PinedRQ, a differential privacy-preserving index for secure range queries on outsourced data in cloud environments. The project demonstrates how to implement encrypted data storage with privacy guarantees while maintaining the ability to perform efficient range queries. 
+
+**Technologies Used**: Python, NumPy, Pandas, AES Encryption, Differential Privacy, Jupyter Notebook
+
+[Go to project →](./differential-privacy-index/)
+
 ### Support Ticket System
 A comprehensive support ticket management system with a Java backend REST API and an Angular frontend. This project was developed as part of the "Systèmes d'Information Répartis" (SIR) class in collaboration with Manh-Huan Nguyen.
 
