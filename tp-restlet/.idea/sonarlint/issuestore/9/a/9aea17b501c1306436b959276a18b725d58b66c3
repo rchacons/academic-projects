@@ -1,0 +1,15 @@
+
+[	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(Š¢· 
+[	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(ú­»
+o
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(İ£§Í
+a
+java:S1192-"FDefine a constant instead of duplicating this literal "tweet" 3 times.(®ëÏûıÿÿÿÿ
+t
+java:S1488J"^Immediately return this expression instead of assigning it to the temporary variable "result".(Å€—é
+e	java:S116"PRename this field "user_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ü«³
+c	java:S116"NRename this field "db_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æã‹œ
+O
+java:S2130$"9Use "Integer.parseInt" for this string-to-int conversion.(Ôöó€
+O
+java:S2130?"9Use "Integer.parseInt" for this string-to-int conversion.(Ôöó€
