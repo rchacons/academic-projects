@@ -4,6 +4,13 @@ This repository contains various academic projects developed during my coursewor
 
 ## Projects
 
+### House Price Prediction Model
+A machine learning project that implements various regression models to predict house prices based on multiple features. The project explores simple linear regression, multiple regression, feature selection techniques, and polynomial regression to achieve accurate price predictions. Developed during my first year of Master's degree for the "Méthodes de prévision à court terme" (MPC) course.
+
+**Technologies Used**: Python, NumPy, Pandas, Scikit-learn, Statsmodels, Jupyter Notebook
+
+[Go to project →](./house-price-prediction-model/)
+
 ### Differential Privacy Index
 A Python implementation of PinedRQ, a differential privacy-preserving index for secure range queries on outsourced data in cloud environments. The project demonstrates how to implement encrypted data storage with privacy guarantees while maintaining the ability to perform efficient range queries. 
 
