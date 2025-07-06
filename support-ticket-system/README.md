@@ -155,15 +155,6 @@ A route consists of a path attribute that represents the URL (relative or absolu
 ![Routing Diagram](./route.png)
 
 ## Contributors
-- Roberto Chacon
-- Manh-Huan Nguyen
-
-## Acknowledgements
-This project was developed as part of the "Systèmes d'Information Répartis" class, based on initial work by Professor Barais.
-
-![Routing Diagram](./route.png)
-
-## Contributors
 - Roberto Chacon ([rchacons](https://github.com/rchacons))
 - Manh-Huan Nguyen ([manh-huan](https://github.com/manh-huan))
 
