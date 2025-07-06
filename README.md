@@ -25,6 +25,13 @@ An Angular-based web application that leverages the public PokéAPI to display a
 
 [Go to project →](./angular-pokemon-explorer/)
 
+### PHP Event Management Platform
+A web application built with PHP using the MVC architecture for managing music events and artists. Features include artist profiles, event scheduling, media management, and an admin panel. Developed during my third year of Bachelor's degree for the "ProjetPW" course.
+
+**Technologies Used**: PHP, MySQL, Custom MVC Framework, HTML/CSS/JavaScript
+
+[Go to project →](./php-event-management-platform/)
+
 ## How to Use
 
 Each project folder contains its own README with specific instructions on how to set up and run the project.
