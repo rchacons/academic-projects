@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StarCN</string>
+    <string name="search_hint">Rechercher un arret</string>
+</resources>

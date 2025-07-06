@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FourthFragment"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/textView6"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="10pt"
+        android:text="Horaires jusqu'au terminus" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/txt_bus2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Ligne"
+                    android:gravity="center"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/txt_stop2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="9pt"
+                    android:layout_marginLeft="10dp"
+                    android:text="Arret" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_direction3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textStyle="italic"
+                android:textSize="9pt"
+                android:text="Direction" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp">
+
+        <TextView
+            android:id="@+id/txt_stopTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="9pt"
+            android:text="stopTime" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_hoursStops"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

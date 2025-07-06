@@ -39,6 +39,13 @@ A tower defense game built with Java that features multiple tower types, enemy u
 
 [Go to project →](./java-tower-defense-game/)
 
+### Rennes Public Transport App
+An Android application for tracking and viewing schedules for the STAR public transportation system in Rennes. Features include downloading and processing GTFS data, offline access to transit information, and a user-friendly interface for viewing routes, stops, and timetables. Developed during my first year of Master's degree for the "MOB" (Mobile Development) course.
+
+**Technologies Used**: Kotlin, Android, Room Database, MVVM Architecture, Coroutines
+
+[Go to project →](./rennes-public-transport-app/)
+
 ## How to Use
 
 Each project folder contains its own README with specific instructions on how to set up and run the project.
