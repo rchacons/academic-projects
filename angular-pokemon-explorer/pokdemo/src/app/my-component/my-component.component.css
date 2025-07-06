@@ -1,0 +1,38 @@
+
+
+h4 {
+    margin-top: 20px;
+  }
+  
+  .normalInput,
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+  
+  select {
+    width: 200px;
+  }
+  
+  .normalButton {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .mat-form-field {
+    margin-right: 10px;
+  }
+  
+ 

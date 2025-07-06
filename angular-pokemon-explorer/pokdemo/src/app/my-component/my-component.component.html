@@ -1,0 +1,75 @@
+<div class="myComponent">
+
+    <h4><b>Q1-Q2: Databinding using ngModel</b></h4>
+    <input class="normalInput" [(ngModel)]="id">
+    <p>
+        {{ id }}
+    </p>
+    <h4><b>Q3: Show the id value in a readonly input</b></h4>
+    <input value="{{id}}" readonly>
+    <br><br>
+    <h4><b>Q3-bis: Why is difficult to do a XSS attack in an angular app</b></h4>
+    <p>
+        Because angular automatically sanitizes any data, so any user input that is displayed
+        in the template is automatically cleaned to remove potentially malicious scrips or tags.
+    </p>
+    <br>
+    <h4><b>Q4-Q7: Show the Pokemon list and the trainer's choice by using ngModel</b></h4>
+    <div>
+        <select [(ngModel)]="selectedPokemon">
+            <option value="" disabled selected>Select a Pokemon</option>
+            <option *ngFor="let pokemon of pokemonList" [ngValue]="pokemon"> {{ pokemon.name }}</option>
+        </select>
+    </div>
+    <p>
+        Pokemon : {{selectedPokemon?.name}}
+    </p>
+    <h4><b>Q8-Q9: Using pipes to filter the pokemon list</b></h4>
+    <div>
+        <input class="normalInput" type="text" [(ngModel)]="searchText" placeholder="Search Pokemon" />
+
+        <select [(ngModel)]="selectedPokemon">
+            <option *ngFor="let pokemon of pokemonList | filterPokemonPipe : searchText : 'name'" [ngValue]="pokemon">
+                {{ pokemon.name }}</option>
+        </select>
+
+        <button class="normalButton" (click)="onButtonClick(selectedPokemon)">Go !</button>
+    </div>
+    <br>
+    <p>Check the console to see the results.</p>
+
+    <h4><b>Q9bis: Use existing components from Angular Material</b></h4>
+    <p>For this question we'll use the MatSelectModule:</p>
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Pokemons</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let pokemon of pokemonList | filterPokemonPipe : searchText : 'name'" [value]="pokemon">
+                {{ pokemon.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <h4><b>Q10-12: Get list of pokemon from API</b></h4>
+    <p>It's already implemented, you can check the previous lists.</p>
+
+    <h4><b>Q13-16: Create a new component that shows the information of a pokemon and a service that will be shared between the two of them</b></h4>
+    <mat-form-field>
+        <mat-label>Look for a pokemon</mat-label>
+        <input matInput type="text" [(ngModel)]="searchTextBis" (input)="pokemonSelect.open()">
+        <button mat-icon-button *ngIf="searchTextBis" matSuffix mat-icon-button aria-label="Clear"
+            (click)="searchTextBis=''">
+            <mat-icon>close</mat-icon>
+        </button>
+        <mat-select (selectionChange)="searchTextBis=''" #pokemonSelect [(ngModel)]="selectedPokemonBis">
+            <mat-option *ngFor="let pokemon of pokemonList | filterPokemonPipe : searchTextBis : 'name'"
+                [value]="pokemon"> {{ pokemon.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-icon-button color="primary" (click)="searchPokemon()">
+        <mat-icon>search</mat-icon>
+    </button>
+    <!--<app-pokemon-details-component [pokemon]="pokemonToDisplay"></app-pokemon-details-component>-->
+    <app-pokemon-details-component></app-pokemon-details-component>
+
+</div>
