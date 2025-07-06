@@ -1,0 +1,18 @@
+/* Style for the app name */
+.appName {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .appName h1 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .appName i {
+    font-style: italic;
+  }
+  
+ 

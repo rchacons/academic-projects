@@ -1,0 +1,24 @@
+<div class="container ">
+    <hr class="my-10">
+  
+    <a href="">Home</a>
+    
+    <hr class="my-10">
+  
+      <table class="table table-responsive">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Type</th>
+            <!-- Section that will be overriden based on type -->
+            <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngTemplateOutlet="bodyTemplate"></ng-container>
+          </tbody>
+      </table>
+
+    </div>
+  

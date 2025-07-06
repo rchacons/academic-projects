@@ -1,0 +1,53 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #ticketForm="ngForm">
+
+        <div class="form-group">
+            <label for="title" id="title-label">Title:</label>
+            <input type="text" id="title" name="title" [(ngModel)]="ticket.title" ng-required="ticket.title">
+        </div>
+
+        <div class="form-group">
+            <label for="typeTicket" id="typeTicket-label">Type of ticket:</label>
+            <select id="typeTicket" name="typeTicket" [(ngModel)]="ticket.type">
+                <option value="BUG">BUG</option>
+                <option value="FEATURE">Feature Request</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="userId" id="userId-label">Creator:</label>
+
+            <select id="userId" name="userId" [(ngModel)]="ticket.creator">
+                <option *ngFor = "let user of users" [ngValue] = user.name>{{user.name}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="stateTicket" id="stateTicket-label">State of ticket:</label>
+            <select id="stateTicket" name="stateTicket" [(ngModel)]="ticket.state">
+                <option value="OPEN">OPEN</option>
+                <option value="feature">CLOSE</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tag" id="tag-label">Tag:</label>
+            <select id="tag" name="tag" [(ngModel)]="ticket.tag">
+                <option value="TAG1">Tag 1</option>
+                <option value="TAG2">Tag 2</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="!ticketForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+
+        
+
+
+
+            
+
+           

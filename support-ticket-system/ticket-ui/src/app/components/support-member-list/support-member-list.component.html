@@ -1,0 +1,21 @@
+<app-person-list>
+  <!-- Overrides the header section of the person list-->
+  <ng-template #headerTemplate>
+    <th>Assigned Tickets</th>
+  </ng-template>
+
+  <!-- Overrides the body section of the person list-->
+  <ng-template #bodyTemplate>
+    <tr *ngFor = "let support of supportMembers">
+      <td>{{support.id}}</td>
+      <td>{{support.name}}</td>
+      <td>{{support.type}}</td>
+      <td>
+        <p *ngFor = "let ticket of support.assignedTicketsList">
+          <button routerLink = "/ticketDetail" routerLinkActive = "active-link" >{{ticket.id}}</button>
+        </p>
+      </td>
+      </tr>
+  </ng-template>
+
+</app-person-list>

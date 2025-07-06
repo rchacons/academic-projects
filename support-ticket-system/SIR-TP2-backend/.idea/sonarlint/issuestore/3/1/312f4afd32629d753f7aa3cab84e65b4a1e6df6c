@@ -1,0 +1,33 @@
+
+j
+java:S1192{"HDefine a constant instead of duplicating this literal "<table>" 3 times.(Á’Úµıÿÿÿÿ8ŸÁÜÓä0
+i
+java:S1192†"FDefine a constant instead of duplicating this literal "</tr>" 6 times.(¼¶Êúÿÿÿÿ8ŸÁÜÓä0
+l
+java:S1192˜"IDefine a constant instead of duplicating this literal "</tbody>" 3 times.(ßœ‚åøÿÿÿÿ8 ÁÜÓä0
+d
+java:S1192"GDefine a constant instead of duplicating this literal "</td>" 11 times.(­·ÿ*8¢ÁÜÓä0
+g
+java:S1192š"IDefine a constant instead of duplicating this literal "</table>" 3 times.(„××Û8£ÁÜÓä0
+f
+java:S1192‰"HDefine a constant instead of duplicating this literal "<tbody>" 3 times.(Øµ•8¤ÁÜÓä0
+j
+java:S1192|"HDefine a constant instead of duplicating this literal "<thead>" 3 times.(³œ­äùÿÿÿÿ8¥ÁÜÓä0
+l
+java:S1192‡"IDefine a constant instead of duplicating this literal "</thead>" 3 times.(«‰´Ùşÿÿÿÿ8¦ÁÜÓä0
+o
+java:S3776("RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(à»¢ü8ÿÂÜÓä0
+C	java:S131-""Add a default case to this switch.(Ü»·áûÿÿÿÿ8ÃÜÓä0
+u
+java:S19897"XHandle the following exception that could be thrown by "valueOf": NumberFormatException.(ÕªŞ‰8—ÃÜÓä0
+]	java:S1259"<This block of commented-out lines of code should be removed.(…‹óÎşÿÿÿÿ8›ÃÜÓä0
+z
+java:S1989L"XHandle the following exception that could be thrown by "valueOf": NumberFormatException.(–„úÉøÿÿÿÿ8§ÃÜÓä0
+t
+java:S1989M"XHandle the following exception that could be thrown by "valueOf": NumberFormatException.(Ë½ş98ªÃÜÓä0
+u
+java:S1989c"SHandle the following exception that could be thrown by "sendRedirect": IOException.(¾ñİÖùÿÿÿÿ8²ÃÜÓä0
+r
+java:S1989m"PHandle the following exception that could be thrown by "getWriter": IOException.(ïô†úÿÿÿÿ8¸ÃÜÓä0
+u
+java:S2226%"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(ìŒÍª8ñÃÜÓä0

@@ -1,0 +1,26 @@
+<div class="container ">
+    <hr class="my-10">
+  
+    <a href="">Home</a>
+    
+    <hr class="my-10">
+  
+      <table class="table table-responsive">
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Creator</th>
+            <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let ticket of tickets">
+              <td>{{ticket.title}}</td>
+              <td>{{ticket.creator}}</td>
+              <td>{{ticket.state}}</td>
+            </tr>
+          </tbody>
+      </table>
+
+    </div>
+  

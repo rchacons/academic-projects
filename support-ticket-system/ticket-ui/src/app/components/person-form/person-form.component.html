@@ -1,0 +1,24 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+        <div class="form-group">
+            <label for="personName" id="personName-label">Name :</label>
+            <input class="form-control" type="text" [(ngModel)]="person.name"
+            id="personName" name="personName"
+            placeholder="Name">
+        </div>
+
+        <div class="form-group">
+            <label for="typePerson" id="typePerson-label">Type of person:</label>
+            <select id="typePerson" name="typePerson" [(ngModel)]="person.type">
+                <option *ngFor="let type of personTypeValues" [value]="type" > {{ type }}</option>    
+            </select>
+        </div>
+        <button type="submit" [disabled]="!personForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+
+        
+
