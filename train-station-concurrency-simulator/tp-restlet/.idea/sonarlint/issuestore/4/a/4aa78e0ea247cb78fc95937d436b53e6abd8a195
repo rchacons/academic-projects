@@ -1,7 +1,0 @@
-
-{
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Äí¶úşÿÿÿÿ8Ä·¡Ê0
-i
-java:S39730"GUse indentation to denote the code conditionally executed by this "if".(‡ìä–ûÿÿÿÿ8Æ·¡Ê0
-q	java:S116"URename this field "userCount_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üşâÇ8Ë·¡Ê0
-m	java:S116"QRename this field "users_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÊã8Ë·¡Ê0
